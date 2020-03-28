@@ -21,9 +21,9 @@
 			</a>
 		</div>
 	</div>
-	<div class="span9">
+<!-- 	<div class="span9">
 		<div class="headerAd"></div>
-	</div>
+	</div> -->
 	<%@ include file="menu.jsp" %>
 </div>
 <div class="container register">

@@ -287,7 +287,7 @@
 		</ul>
 	</div>
 	<div class="span24">
-		<div class="copyright">Copyright © 2005-2015 网上商城 版权所有</div>
+		<div class="copyright">Copyright © 2020 网上商城 版权所有</div>
 	</div>
 </div>
 </body>

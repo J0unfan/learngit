@@ -3,7 +3,7 @@
 <div class="span10 last">
 	<div class="topNav clearfix">
 		<ul>
-			<s:if text="#session.existUser == null">
+			<s:if test="#session.existUser == null">
 				<li id="headerLogin" class="headerLogin" style="display: list-item;">
 					<a href="${ pageContext.request.contextPath }/user_loginPage.action">登录</a>|
 				</li>
@@ -32,6 +32,12 @@
 	</div>
 	<div class="phone">
 		客服热线：<strong></strong>
+	</div>
+</div>
+<div class="span9 last">
+	<div class="headerAd">
+		<h3><a href="${ pageContext.request.contextPath }/index.action">>>前往首页</a>
+		</h3>
 	</div>
 </div>
 <%-- <div class="span24">

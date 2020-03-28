@@ -43,11 +43,11 @@
 		<property name="mappingResources">
 			<list>
 				<value>ljf/GP/shop/user/vo/User.hbm.xml</value>
-<!-- 				<value>ljf/GP/shop/category/vo/Category.hbm.xml</value> -->
-<!-- 				<value>ljf/GP/shop/product/vo/Product.hbm.xml</value> -->
-<!-- 				<value>ljf/GP/shop/categorysecond/vo/CategorySecond.hbm.xml</value> -->
-<!-- 				<value>ljf/GP/shop/order/vo/Order.hbm.xml</value> -->
-<!-- 				<value>ljf/GP/shop/order/vo/OrderItem.hbm.xml</value> -->
+ 				<value>ljf/GP/shop/category/vo/Category.hbm.xml</value>
+				<value>ljf/GP/shop/product/vo/Product.hbm.xml</value>
+ 				<value>ljf/GP/shop/categorysecond/vo/CategorySecond.hbm.xml</value>
+ 				<value>ljf/GP/shop/order/vo/Order.hbm.xml</value>
+ 				<value>ljf/GP/shop/order/vo/OrderItem.hbm.xml</value>
 				<value>ljf/GP/shop/adminuser/vo/AdminUser.hbm.xml</value>
 			</list>
 		</property>
@@ -69,8 +69,8 @@
 	
 	<!-- 首页访问的Action -->
 	<bean id="indexAction" class="ljf.GP.shop.index.action.IndexAction" scope="prototype">
-<!-- 		<property name="categoryService" ref="categoryService"/> -->
-<!-- 		<property name="productService" ref="productService"/> -->
+ 		<property name="categoryService" ref="categoryService"/>
+ 		<property name="productService" ref="productService"/>
 	</bean>
 	
 	<!-- 配置验证码Action -->
@@ -135,13 +135,17 @@
 		<property name="userDao" ref="userDao"/>
 	</bean>
 	
-<!-- 	<bean id="categoryService" class="ljf.GP.shop.category.service.CategoryService"> -->
-<!-- 		<property name="categoryDao" ref="categoryDao"/> -->
-<!-- 	</bean> -->
+ 	<bean id="categoryService" class="ljf.GP.shop.category.service.CategoryService">
+ 		<property name="categoryDao" ref="categoryDao"/>
+ 	</bean>
+		
+<!--  	<bean id="categorySecondService" class="ljf.GP.shop.categorysecond.service.CategorySecondService">
+ 		<property name="categorySecondDao" ref="categorySecondDao"/>
+	</bean> -->
 	
-<!-- 	<bean id="productService" class="ljf.GP.shop.product.service.ProductService"> -->
-<!-- 		<property name="productDao" ref="productDao"/> -->
-<!-- 	</bean> -->
+ 	<bean id="productService" class="ljf.GP.shop.product.service.ProductService">
+ 		<property name="productDao" ref="productDao"/>
+ 	</bean>
 	
 <!-- 	<bean id="orderService" class="ljf.GP.shop.order.service.OrderService"> -->
 <!-- 		<property name="orderDao" ref="orderDao"/> -->
@@ -151,22 +155,22 @@
 		<property name="adminUserDao" ref="adminUserDao"/>
 	</bean>
 	
-<!-- 	<bean id="categorySecondService" class="ljf.GP.shop.categorysecond.service.CategorySecondService"> -->
-<!-- 		<property name="categorySecondDao" ref="categorySecondDao"/> -->
-<!-- 	</bean> -->
-	
 	<!-- Dao的配置  ===========================-->
 	<bean id="userDao" class="ljf.GP.shop.user.dao.UserDao">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 	
-<!-- 	<bean id="categoryDao" class="ljf.GP.shop.category.dao.CategoryDao"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
-<!-- 	</bean>	 -->
-	
-<!-- 	<bean id="productDao" class="ljf.GP.shop.product.dao.ProductDao"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
+ 	<bean id="categoryDao" class="ljf.GP.shop.category.dao.CategoryDao">
+ 		<property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>
+ 		
+<!-- 	<bean id="categorySecondDao" class="ljf.GP.shop.categorysecond.dao.CategorySecondDao"> -->
+<!--  		<property name="sessionFactory" ref="sessionFactory"/> -->
 <!-- 	</bean> -->
+	
+ 	<bean id="productDao" class="ljf.GP.shop.product.dao.ProductDao">
+ 		<property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>
 	
 <!-- 	<bean id="orderDao" class="ljf.GP.shop.order.dao.OrderDao"> -->
 <!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
@@ -175,8 +179,4 @@
 	<bean id="adminUserDao" class="ljf.GP.shop.adminuser.dao.AdminUserDao">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
-	
-<!-- 	<bean id="categorySecondDao" class="ljf.GP.shop.categorysecond.dao.CategorySecondDao"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
-<!-- 	</bean> -->
 </beans>

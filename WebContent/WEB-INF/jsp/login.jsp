@@ -52,7 +52,7 @@
 										用户名:
 								</th>
 								<td>
-									<input type="text" id="username" name="username" class="text" maxlength="20">
+									<input type="text" id="username" name="username" class="text" maxlength="20"/>
 									
 								</td>
 							</tr>
@@ -70,8 +70,8 @@
 								</th>
 								<td>
 									<span class="fieldSet">
-										<input type="text" id="checkcode" name="checkcode" class="text captcha" maxlength="4" autocomplete="off" onMouseOut="checkCode()">
-										<img id="checkImg" class="captchaImage" src="${pageContext.request.contextPath}/checkImg.action" onclick="change()" title="点击更换验证码">
+										<input type="text" id="checkcode" name="checkcode" class="text captcha" maxlength="4" autocomplete="off" onMouseOut="checkCode()"/>
+										<img id="checkImg" class="captchaImage" src="${pageContext.request.contextPath}/checkImg.action" onclick="change()" title="点击更换验证码"/>
 									</span>
 									<div><font color="red" id="checkcodeCheck"></font></div>
 									</td>

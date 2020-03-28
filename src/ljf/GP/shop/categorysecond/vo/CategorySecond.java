@@ -10,7 +10,7 @@ import java.util.Set;
 import ljf.GP.shop.category.vo.Category;
 import ljf.GP.shop.product.vo.Product;
 
-public class CategorySeconds {
+public class CategorySecond {
 	private Integer csid;
 	private String csname;
 	// 所属的一级分类

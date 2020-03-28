@@ -7,11 +7,13 @@ package ljf.GP.shop.category.vo;
 import java.util.HashSet;
 import java.util.Set;
 
+import ljf.GP.shop.categorysecond.vo.CategorySecond;
+
 public class Category {
 	private Integer cid;
 	private String cname;
 	// 一级分类中二级分类的集合
-	private Set categorySeconds = new HashSet<>();
+	private Set<CategorySecond> categorySeconds = new HashSet<>();
 
 	public Integer getCid() {
 		return cid;
@@ -29,11 +31,12 @@ public class Category {
 		this.cname = cname;
 	}
 
-	public Set getCategorySeconds() {
+	public Set<CategorySecond> getCategorySeconds() {
 		return categorySeconds;
 	}
 
-	public void setCategorySeconds(Set categorySeconds) {
+	public void setCategorySeconds(Set<CategorySecond> categorySeconds) {
 		this.categorySeconds = categorySeconds;
 	}
+
 }
