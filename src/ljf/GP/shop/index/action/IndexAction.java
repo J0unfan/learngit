@@ -8,5 +8,6 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author ljf
  */
 public class IndexAction extends ActionSupport {
+	// 注入一级分类service
 
 }

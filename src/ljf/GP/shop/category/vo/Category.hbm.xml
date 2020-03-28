@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    	<class name="ljf.GP.shop.category.vo.Category" table="category">
+    		<id name="cid">
+    			<generator class="native"></generator>
+    		</id>
+    		
+    		<property name="cname"></property>
+    		
+    		<!-- 二级分类集合的映射 -->
+    		<set order-by="csid" name="categorySeconds" lazy="false" cascade="delete">
+    			<key column="csid"></key>
+    			<one-to-many class="ljf.GP.shop.categorysecond.vo.categorySecond"></one-to-many>
+    		</set>
+    	</class>
+    </hibernate-mapping>

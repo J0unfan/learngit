@@ -13,6 +13,7 @@
 	http://www.springframework.org/schema/tx 
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
+
 	<!-- 配置连接池: -->
 	<!-- 引入外部属性文件 -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>
