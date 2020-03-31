@@ -33,7 +33,7 @@ public class MailUtils {
 		props.setProperty("mail.host", "smtp.163.com");
 		Session session = Session.getInstance(props, new Authenticator() {
 			protected PasswordAuthentication getPA() {
-				return new PasswordAuthentication("junfan3229@163.com", "ljf19980531");
+				return new PasswordAuthentication("junfan3229@163.com", "ljf19980531123");
 			}
 		});
 		// 创建邮件对象

@@ -84,9 +84,9 @@
 	</bean>
 	
 	<!-- 商品模块的Action -->
-<!-- 	<bean id="productAction" class="ljf.GP.shop.product.action.ProductAction" scope="prototype"> -->
-<!-- 		<property name="productService" ref="productService"/> -->
-<!-- 	</bean> -->
+	<bean id="productAction" class="ljf.GP.shop.product.action.ProductAction" scope="prototype">
+		<property name="productService" ref="productService"/>
+	</bean>
 	
 	<!-- 购物车的Action -->
 <!-- 	<bean id="cartAction" class="ljf.GP.shop.cart.action.CartAction" scope="prototype"> -->

@@ -40,11 +40,3 @@
 		</h3>
 	</div>
 </div>
-<%-- <div class="span24">
-	<ul class="mainNav">
-		<li><a href="${ pageContext.request.contextPath }/index.actio">首页</a> |</li>
-		<s:iterator>
-			<li><a href="${ pageContext.request.contextPath }/product_findByCid.action?cid=<s:property value="#c.cid"/>&page=1"><s:property value="#c.cname"/></a> |</li>
-		</s:iterator>
-	</ul>
-</div> --%>

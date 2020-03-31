@@ -16,7 +16,7 @@
 	
 		<global-results>
 			<result name="msg">/WEB-INF/jsp/msg.jsp</result>
-			<result name="login">/index.jsp</result>
+			<result name="login">/WEB-INF/jsp/index.jsp</result>
 		</global-results>
 		
 	

@@ -21,28 +21,28 @@
 			</a>
 		</div>
 	</div>
-<%-- 	<div class="span9">
-<div class="headerAd">
-	<img src="${pageContext.request.contextPath}/image/header.jpg" width="320" height="50" alt="正品保障" title="正品保障"/>
-</div>	
-</div> --%>
 	
 	<%@ include file="menu.jsp" %>
-
+		
+	<div class="span24">
+	<ul class="mainNav">
+		<s:iterator var="c" value="#session.categories">
+			<li><a href="${ pageContext.request.contextPath }/product_findByCid.action?cid=<s:property value="#c.cid"/>&page=1"><s:property value="#c.cname"/></a> |</li>
+		</s:iterator>
+	</ul>
+</div>
 </div>	
 
 <div class="container index">
-		
 
 		<div class="span24">
 			<div id="hotProduct" class="hotProduct clearfix">
 					<div class="title">
 						<strong>热门商品</strong>
-						<!-- <a  target="_blank"></a> -->
 					</div>
 					<ul class="tab">
 							<li class="current">
-								<a href="./蔬菜分类.htm?tagIds=1" target="_blank"></a>
+								<a  target="_blank"></a>
 							</li>
 							<li>
 								<a  target="_blank"></a>
@@ -51,9 +51,6 @@
 								<a target="_blank"></a>
 							</li>
 					</ul>
-<!-- 					<div class="hotProductAd">
-			<img src="${pageContext.request.contextPath}/image/a.jpg" width="260" height="343" alt="热门商品" title="热门商品">
-</div> -->
 						<ul class="tabContent" style="display: block;">
 							<s:iterator var="p" value="hList">
 									<li>
@@ -61,7 +58,7 @@
 									</li>
 							</s:iterator>		
 						</ul>
-						<ul class="tabContent" style="display: none;">
+					<!-- 	<ul class="tabContent" style="display: none;">
 									<li>
 										<a target="_blank"><img src="./Mango商城 - Powered By Mango Team_files/c5b1b396-181a-4805-9e68-9b400d71f91e-thumbnail.jpg" data-original="http://storage.shopxx.net/demo-image/3.0/201301/c5b1b396-181a-4805-9e68-9b400d71f91e-thumbnail.jpg" style="display: block;"></a>
 									</li>
@@ -112,7 +109,7 @@
 									<li>
 										<a target="_blank"><img src="./Mango商城 - Powered By Mango Team_files/f1174ca6-6bdf-4d0b-86e6-5455bc8e89ad-thumbnail.jpg" data-original="http://storage.shopxx.net/demo-image/3.0/201301/f1174ca6-6bdf-4d0b-86e6-5455bc8e89ad-thumbnail.jpg" style="display: block;"></a>
 									</li>
-						</ul>
+						</ul> -->
 			</div>
 		</div>
 		<div class="span24">
@@ -123,7 +120,7 @@
 					</div>
 					<ul class="tab">
 							<li class="current">
-								<a href="./蔬菜分类.htm?tagIds=2" target="_blank"></a>
+								<a  target="_blank"></a>
 							</li>
 							<li>
 								<a  target="_blank"></a>
@@ -131,11 +128,7 @@
 							<li>
 								<a target="_blank"></a>
 							</li>
-					</ul>
-<!-- 					<div class="newProductAd">
-									<img src="${pageContext.request.contextPath}/image/q.jpg" width="260" height="343" alt="最新商品" title="最新商品">
-						</div>
-						 -->						
+					</ul>					
 						 <ul class="tabContent" style="display: block;">
 						 	<s:iterator var="p" value="nList">
 									<li>
@@ -143,7 +136,7 @@
 									</li>
 							</s:iterator>		
 						</ul>
-						<ul class="tabContent" style="display: none;">
+						<!-- <ul class="tabContent" style="display: none;">
 									<li>
 										<a  target="_blank"><img src="./Mango商城 - Powered By Mango Team_files/b04a22f5-267d-4e33-ac58-dda941eeaf84-thumbnail.jpg" data-original="http://storage.shopxx.net/demo-image/3.0/201301/b04a22f5-267d-4e33-ac58-dda941eeaf84-thumbnail.jpg" style="display: block;"></a>
 									</li>
@@ -194,7 +187,7 @@
 									<li>
 										<a  target="_blank"><img src="./Mango商城 - Powered By Mango Team_files/2971c96e-9f11-4491-9faf-9ea7e1fec53c-thumbnail.jpg" data-original="http://storage.shopxx.net/demo-image/3.0/201301/2971c96e-9f11-4491-9faf-9ea7e1fec53c-thumbnail.jpg" style="display: block;"></a>
 									</li>
-						</ul>
+						</ul> -->
 			</div>
 		</div>
 		<div class="span24">
