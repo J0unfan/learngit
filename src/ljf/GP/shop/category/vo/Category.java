@@ -13,7 +13,7 @@ public class Category {
 	private Integer cid;
 	private String cname;
 	// 一级分类中二级分类的集合
-	private Set<CategorySecond> categorySeconds = new HashSet<>();
+	private Set<CategorySecond> categorySeconds = new HashSet<CategorySecond>();
 
 	public Integer getCid() {
 		return cid;

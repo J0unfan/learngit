@@ -108,7 +108,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	/**
 	 * 用户激活的方法
 	 */
-	public String action() {
+	public String active() {
 		User existUser = userService.findByCode(user.getCode());
 		// 判断激活码
 		if (existUser == null) {

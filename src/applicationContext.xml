@@ -125,9 +125,9 @@
 <!-- 		<property name="orderService" ref="orderService"/> -->
 <!-- 	</bean> -->
 	<!-- 配置后台用户管理的Action -->
-<!-- 	<bean id="userAdminAction" class="ljf.GP.shop.user.adminaction.UserAdminAction" scope="prototype"> -->
-<!-- 		<property name="userService" ref="userService"/> -->
-<!-- 	</bean> -->
+	<bean id="userAdminAction" class="ljf.GP.shop.user.adminAction.UserAdminAction" scope="prototype">
+		<property name="userService" ref="userService"/>
+	</bean>
 	
 	
 	<!-- Service的配置  ===========================-->

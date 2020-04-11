@@ -12,7 +12,7 @@
     		
     		<!-- 二级分类集合的映射 -->
     		<set order-by="csid" name="categorySeconds" lazy="false" cascade="delete">
-    			<key column="csid"></key>
+    			<key column="cid"></key>
     			<one-to-many class="ljf.GP.shop.categorysecond.vo.CategorySecond"></one-to-many>
     		</set>
     	</class>
