@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<title>民之丰农产品商城</title>
+<title>--商品详情</title>
 <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css"/>
 <link href="${pageContext.request.contextPath}/css/product.css" rel="stylesheet" type="text/css"/>
 <script>
@@ -19,7 +19,7 @@
 <div class="container header">
 	<div class="span5">
 		<div class="logo">
-			<a>
+			<a href="${pageContext.request.contextPath}/index.action">
 				<img src="${pageContext.request.contextPath}/image/r___________renleipic_01/logo.png" alt="民之丰">
 			</a>
 		</div>
