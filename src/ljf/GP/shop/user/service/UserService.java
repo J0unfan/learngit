@@ -60,8 +60,8 @@ public class UserService {
 		// 设置当前页数:
 		pageBean.setPage(page);
 		// 设置每页显示记录数:
-		// 显示5个
-		int limit = 5;
+		// 显示10个
+		int limit = 10;
 		pageBean.setLimit(limit);
 		// 设置总记录数:
 		int totalCount = 0;

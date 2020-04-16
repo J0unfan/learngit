@@ -47,8 +47,6 @@
 						</dl>
 					</s:iterator>	
 			</div>
-			
-
 		</div>
 		
 		<div class="span18 last">
