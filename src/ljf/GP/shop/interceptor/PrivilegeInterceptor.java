@@ -26,7 +26,7 @@ public class PrivilegeInterceptor extends MethodFilterInterceptor {
 			// 跳转到登录页面:
 			ActionSupport support = (ActionSupport) actionInvocation.getAction();
 			support.addActionError("您还没有登录!没有权限访问!");
-			return ActionSupport.LOGIN;
+			return ActionSupport.ERROR;
 		}
 	}
 

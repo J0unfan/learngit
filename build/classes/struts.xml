@@ -4,7 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-
+	<constant name="struts.multipart.saveDir" value="/products"/>
     <constant name="struts.devMode" value="false" />
 
 	<package name="shop" extends="struts-default" namespace="/">
@@ -17,6 +17,7 @@
 		<global-results>
 			<result name="msg">/WEB-INF/jsp/msg.jsp</result>
 			<result name="login">/WEB-INF/jsp/login.jsp</result>
+			<result name="error">/admin/index.jsp</result>
 		</global-results>
 		
 	

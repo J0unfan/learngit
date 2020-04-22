@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ljf.GP.shop.order.dao.OrderDao;
 import ljf.GP.shop.order.vo.Order;
+import ljf.GP.shop.order.vo.OrderItem;
 import ljf.GP.shop.utils.PageBean;
 
 /**
@@ -53,5 +54,44 @@ public class OrderService {
 		return pageBean;
 	}
 
-	//
+	// 根据订单id查询订单
+	public Order findByOid(Integer oid) {
+		return orderDao.findByOid(oid);
+	}
+
+	// 业务层修改订单的方法
+	public void update(Order currOrder) {
+		orderDao.update(currOrder);
+	}
+
+	// 查询所有订单的方法
+	public PageBean<Order> findAll(Integer page) {
+		PageBean<Order> pageBean = new PageBean<Order>();
+		// 设置参数
+		pageBean.setPage(page);
+		// 设置每页显示的记录数:
+		int limit = 10;
+		pageBean.setLimit(limit);
+		// 设置总记录数
+		int totalCount = orderDao.findCount();
+		pageBean.setTotalCount(totalCount);
+		// 设置总页数
+		int totalPage = 0;
+		if (totalCount % limit == 0) {
+			totalPage = totalCount / limit;
+		} else {
+			totalPage = totalCount / limit + 1;
+		}
+		pageBean.setTotalPage(totalPage);
+		// 设置每页显示数据集合
+		int begin = (page - 1) * limit;
+		List<Order> list = orderDao.findByPage(begin, limit);
+		pageBean.setList(list);
+		return pageBean;
+	}
+
+	// 根据订单号查询订单项
+	public List<OrderItem> findOrderItem(Integer oid) {
+		return orderDao.findOrderItems(oid);
+	}
 }

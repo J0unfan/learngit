@@ -21,6 +21,11 @@ public class Product {
 	// 二级分类的外键:使用二级分类的对象.
 	private CategorySecond categorySecond;
 
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getPid() {
 		return pid;
 	}

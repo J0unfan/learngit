@@ -94,9 +94,9 @@
 	</bean>
 	
 	<!-- 配置OrderAction -->
-<!-- 	<bean id="orderAction" class="ljf.GP.shop.order.action.OrderAction" scope="prototype"> -->
-<!-- 		<property name="orderService" ref="orderService"/> -->
-<!-- 	</bean> -->
+	<bean id="orderAction" class="ljf.GP.shop.order.action.OrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"/>
+	</bean>
 	
 	<!-- 配置后台登录的Action -->
 	<bean id="adminUserAction" class="ljf.GP.shop.adminuser.action.AdminUserAction" scope="prototype">
@@ -104,26 +104,26 @@
 	</bean>
 	
 	<!-- 配置后台一级管理的Action -->
-<!-- 	<bean id="adminCategoryAction" class="ljf.GP.shop.category.adminaction.AdminCategoryAction" scope="prototype"> -->
-<!-- 		<property name="categoryService" ref="categoryService"/> -->
-<!-- 	</bean> -->
+	<bean id="adminCategoryAction" class="ljf.GP.shop.category.adminaction.AdminCategoryAction" scope="prototype">
+		<property name="categoryService" ref="categoryService"/>
+	</bean>
 	
 	<!-- 配置后台二级分类管理的Action -->
-<!-- 	<bean id="adminCategorySecondAction" class="ljf.GP.shop.categorysecond.adminaction.AdminCategorySecondAction" scope="prototype"> -->
-<!-- 		<property name="categorySecondService" ref="categorySecondService"/> -->
-<!-- 		<property name="categoryService" ref="categoryService"/> -->
-<!-- 	</bean> -->
+	<bean id="adminCategorySecondAction" class="ljf.GP.shop.categorysecond.adminaction.AdminCategorySecondAction" scope="prototype">
+		<property name="categorySecondService" ref="categorySecondService"/>
+		<property name="categoryService" ref="categoryService"/>
+	</bean>
 	
 	<!-- 配置后台商品管理的Action -->
-<!-- 	<bean id="adminProductAction" class="ljf.GP.shop.product.adminaction.AdminProductAction" scope="prototype"> -->
-<!-- 		<property name="productService" ref="productService"/> -->
-<!-- 		<property name="categorySecondService" ref="categorySecondService"/> -->
-<!-- 	</bean> -->
+	<bean id="adminProductAction" class="ljf.GP.shop.product.adminaction.AdminProductAction" scope="prototype">
+		<property name="productService" ref="productService"/>
+		<property name="categorySecondService" ref="categorySecondService"/>
+	</bean>
 	
 	<!-- 配置后台订单管理的Action -->
-<!-- 	<bean id="adminOrderAction" class="ljf.GP.shop.order.adminaction.AdminOrderAction" scope="prototype"> -->
-<!-- 		<property name="orderService" ref="orderService"/> -->
-<!-- 	</bean> -->
+	<bean id="adminOrderAction" class="ljf.GP.shop.order.adminaction.AdminOrderAction" scope="prototype">
+		<property name="orderService" ref="orderService"/>
+	</bean>
 	<!-- 配置后台用户管理的Action -->
 	<bean id="userAdminAction" class="ljf.GP.shop.user.adminAction.UserAdminAction" scope="prototype">
 		<property name="userService" ref="userService"/>
@@ -139,17 +139,17 @@
  		<property name="categoryDao" ref="categoryDao"/>
  	</bean>
 		
-<!--  	<bean id="categorySecondService" class="ljf.GP.shop.categorysecond.service.CategorySecondService">
+  	<bean id="categorySecondService" class="ljf.GP.shop.categorysecond.service.CategorySecondService">
  		<property name="categorySecondDao" ref="categorySecondDao"/>
-	</bean> -->
+ 	</bean>
 	
  	<bean id="productService" class="ljf.GP.shop.product.service.ProductService">
  		<property name="productDao" ref="productDao"/>
  	</bean>
 	
-<!-- 	<bean id="orderService" class="ljf.GP.shop.order.service.OrderService"> -->
-<!-- 		<property name="orderDao" ref="orderDao"/> -->
-<!-- 	</bean> -->
+	<bean id="orderService" class="ljf.GP.shop.order.service.OrderService">
+		<property name="orderDao" ref="orderDao"/>
+	</bean>
 	
 	<bean id="adminUserService" class="ljf.GP.shop.adminuser.service.AdminUserService">
 		<property name="adminUserDao" ref="adminUserDao"/>
@@ -164,17 +164,17 @@
  		<property name="sessionFactory" ref="sessionFactory"/>
  	</bean>
  		
-<!-- 	<bean id="categorySecondDao" class="ljf.GP.shop.categorysecond.dao.CategorySecondDao"> -->
-<!--  		<property name="sessionFactory" ref="sessionFactory"/> -->
-<!-- 	</bean> -->
+ 	<bean id="categorySecondDao" class="ljf.GP.shop.categorysecond.dao.CategorySecondDao">
+ 		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
 	
  	<bean id="productDao" class="ljf.GP.shop.product.dao.ProductDao">
  		<property name="sessionFactory" ref="sessionFactory"/>
  	</bean>
 	
-<!-- 	<bean id="orderDao" class="ljf.GP.shop.order.dao.OrderDao"> -->
-<!-- 		<property name="sessionFactory" ref="sessionFactory"/> -->
-<!-- 	</bean> -->
+	<bean id="orderDao" class="ljf.GP.shop.order.dao.OrderDao">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
 	
 	<bean id="adminUserDao" class="ljf.GP.shop.adminuser.dao.AdminUserDao">
 		<property name="sessionFactory" ref="sessionFactory"/>

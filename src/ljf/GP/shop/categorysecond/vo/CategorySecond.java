@@ -18,6 +18,11 @@ public class CategorySecond {
 	// 二级分类下的商品集合
 	private Set<Product> products = new HashSet<Product>();
 
+	public CategorySecond() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Integer getCsid() {
 		return csid;
 	}
