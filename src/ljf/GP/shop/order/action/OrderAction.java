@@ -16,6 +16,8 @@ import ljf.GP.shop.cart.vo.CartItem;
 import ljf.GP.shop.order.service.OrderService;
 import ljf.GP.shop.order.vo.Order;
 import ljf.GP.shop.order.vo.OrderItem;
+import ljf.GP.shop.product.service.ProductService;
+import ljf.GP.shop.product.vo.Product;
 import ljf.GP.shop.user.vo.User;
 import ljf.GP.shop.utils.PageBean;
 import ljf.GP.shop.utils.PaymentUtil;
@@ -37,6 +39,12 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order> {
 	private Integer page;
 
 	private OrderService orderService;
+
+	private ProductService productService;
+
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
+	}
 
 	public void setPage(Integer page) {
 		this.page = page;
@@ -98,6 +106,12 @@ public class OrderAction extends ActionSupport implements ModelDriven<Order> {
 			orderItem.setCount(cartItem.getCount());
 			orderItem.setSubtotal(cartItem.getSubtotal());
 			orderItem.setProduct(cartItem.getProduct());
+			// 商品库存的改变
+			Product product = cartItem.getProduct();
+			Integer number = product.getNumber() - cartItem.getCount();
+			product.setNumber(number);
+			productService.update(product);
+
 			orderItem.setOrder(order);
 
 			order.getOrderItems().add(orderItem);

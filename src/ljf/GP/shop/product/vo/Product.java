@@ -17,14 +17,10 @@ public class Product {
 	private String image;
 	private String pdesc;
 	private Integer is_hot; // 是否是热门商品：0：不是热门，1：是热门
+	private Integer number; // 商品数量
 	private Date pdate;
 	// 二级分类的外键:使用二级分类的对象.
 	private CategorySecond categorySecond;
-
-	public Product() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public Integer getPid() {
 		return pid;
@@ -80,6 +76,14 @@ public class Product {
 
 	public void setIs_hot(Integer is_hot) {
 		this.is_hot = is_hot;
+	}
+
+	public Integer getNumber() {
+		return number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
 	}
 
 	public Date getPdate() {

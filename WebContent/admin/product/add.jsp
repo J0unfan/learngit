@@ -55,8 +55,14 @@
 					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
 						商品图片：
 					</td>
-					<td class="ta_01" bgColor="#ffffff" colspan="3">
+					<td class="ta_01" bgColor="#ffffff">
 						<input type="file" name="upload" />
+					</td>
+					<td width="18%" align="center" bgColor="#f5fafe" class="ta_01">
+						商品数量：
+					</td>
+					<td class="ta_01" bgColor="#ffffff">
+						<input type="text" name="number" value="" id="userAction_save_do_logonName" class="bg"/>
 					</td>
 				</tr>
 				<tr>
@@ -64,7 +70,7 @@
 						所属的二级分类：
 					</td>
 					<td class="ta_01" bgColor="#ffffff" colspan="3">
-						<select name="categorySecond.csid">
+						<select name="${categorySecond.csid}">
 							<s:iterator var="cs" value="csList">
 								<option value="<s:property value="#cs.csid"/>"><s:property value="#cs.csname"/></option>
 							</s:iterator>

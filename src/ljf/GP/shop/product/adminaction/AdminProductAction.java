@@ -109,6 +109,7 @@ public class AdminProductAction extends ActionSupport implements ModelDriven<Pro
 			product.setImage("products/" + uploadFileName);
 		}
 		productService.save(product);
+		// System.out.println(product.getCategorySecond().toString());
 		return "saveSuccess";
 	}
 

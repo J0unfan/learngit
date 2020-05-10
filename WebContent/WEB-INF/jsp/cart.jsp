@@ -72,11 +72,11 @@
 				<dl id="giftItems" class="hidden" style="display: none;">
 				</dl>
 				<div class="total">
-					<em id="promotion"></em>
+					<%-- <em id="promotion"></em>
 							<em>
 								登录后确认是否享有优惠
 							</em>
-					赠送积分: <em id="effectivePoint"><s:property value="#session.cart.total"/></em>
+					赠送积分: <em id="effectivePoint"><s:property value="#session.cart.total"/></em> --%>
 					商品金额: <strong id="effectivePrice">￥<s:property value="#session.cart.total"/>元</strong>
 				</div>
 				<div class="bottom">

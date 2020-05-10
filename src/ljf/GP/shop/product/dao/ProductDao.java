@@ -119,4 +119,5 @@ public class ProductDao extends HibernateDaoSupport {
 	public void update(Product product) {
 		this.getHibernateTemplate().update(product);
 	}
+
 }

@@ -9,7 +9,14 @@
 <link href="${pageContext.request.contextPath}/css/product.css" rel="stylesheet" type="text/css"/>
 <script>
 	function saveCart(){
-		document.getElementById("cartForm").submit();
+		var number = "<s:property value="model.number"/>";
+		var count = document.getElementById("count").value;
+		if (Number(count)> Number(number)) {
+			alert("不好意思亲！您购买的数量大于库存数量！");
+			return false;
+		}else {
+			document.getElementById("cartForm").submit();
+		}
 	}
 </script>
 
@@ -70,6 +77,17 @@
 							<del>￥<s:property value="model.market_price"/>元</del>
 					</dd>
 				</dl>
+				<dl>
+					<dt>库存数量:</dt>
+					<dd>
+						<s:if test="model.number > 0">
+							<s:property value="model.number"/>&nbsp;千克
+						</s:if>
+						<s:else>
+							<dt style="color: red;">库存不足</dt>&nbsp;
+						</s:else>
+					</dd>
+				</dl>
 					<dl>
 						<dt>促销:</dt>
 						<dd>
@@ -92,7 +110,7 @@
 								<input id="count" name="count" value="1" maxlength="4" onpaste="return false;" type="text"/>
 							</dd>
 							<dd>
-								件
+								千克
 							</dd>
 						</dl>
 						

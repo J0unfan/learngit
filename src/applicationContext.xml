@@ -96,6 +96,7 @@
 	<!-- 配置OrderAction -->
 	<bean id="orderAction" class="ljf.GP.shop.order.action.OrderAction" scope="prototype">
 		<property name="orderService" ref="orderService"/>
+		<property name="productService" ref="productService"/>
 	</bean>
 	
 	<!-- 配置后台登录的Action -->

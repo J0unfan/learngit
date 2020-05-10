@@ -14,8 +14,8 @@
 	</HEAD>
 	<body>
 		<br>
-		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/user/list.jsp" method="post">
-			<table cellSpacing="1" cellPadding="0" width="100%" align="center" bgColor="#f5fafe" border="0">
+<!-- 		<form id="Form1" name="Form1" method="post">
+ -->			<table cellSpacing="1" cellPadding="0" width="100%" align="center" bgColor="#f5fafe" border="0">
 				<TBODY>
 					<tr>
 						<td class="ta_01" align="center" bgColor="#afd1f3">
@@ -36,7 +36,7 @@
 								<tr
 									style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
-									<td align="center" width="18%">
+									<td align="center" width="10%">
 										序号
 									</td>
 									<td align="center" width="17%">
@@ -48,8 +48,11 @@
 									<td align="center" width="17%">
 										商品价格
 									</td>
-									<td align="center" width="17%">
+									<td align="center" width="10%">
 										是否热门
+									</td>
+									<td align="center" width="17%">
+										商品数量（千克）
 									</td>
 									<td width="7%" align="center">
 										编辑
@@ -62,7 +65,7 @@
 										<tr onmouseover="this.style.backgroundColor = 'white'"
 											onmouseout="this.style.backgroundColor = '#F5FAFE';">
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-												width="18%">
+												width="10%">
 												<s:property value="#status.count"/>
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -78,13 +81,17 @@
 												<s:property value="#p.shop_price"/>
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-												width="17%">
+												>
 												<s:if test="#p.is_hot==1">
 													是
 												</s:if>
 												<s:else>
 													否
 												</s:else>
+											</td>
+											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+												width="17%">
+												<s:property value="#p.number"/>
 											</td>
 											<td align="center" style="HEIGHT: 22px">
 												<a href="${ pageContext.request.contextPath }/adminProduct_edit.action?pid=<s:property value="#p.pid"/>">
@@ -117,7 +124,7 @@
 					</tr>
 				</TBODY>
 			</table>
-		</form>
+<!-- 		</form> -->
 	</body>
 </HTML>
 
